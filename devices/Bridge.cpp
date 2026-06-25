@@ -6,7 +6,7 @@ void Bridge::receive(Frame frame, Device *sender)
 {
     cout << "[Bridge " << id << "] received frame\n";
 
-    // learn source MAC -> port
+    //learning mac
     macTable[frame.sourceMAC] = sender;
     cout << "[Bridge " << id << "] learned " << frame.sourceMAC << endl;
 
